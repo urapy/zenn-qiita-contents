@@ -1,5 +1,5 @@
 ---
-title: "GNS3でc3745を使ったOSPFエリア間通信を検証する"
+title: "【ネスペ対策】GNS3でOSPFエリア間通信を検証する！"
 emoji: "🛰️"
 type: "tech"
 topics: ["gns3", "ospf", "cisco", "network"]
