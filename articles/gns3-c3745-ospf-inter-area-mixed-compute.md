@@ -8,14 +8,14 @@ published: true
 
 ## 1. はじめに
 
-今回は local compute の c3745 を使って OSPF の DR / BDR / ABR を一度に確認できる構成を自動生成します。クライアントは remote compute の Ubuntu Cloud Guest を使い、DHCP でアドレスを払い出してエリア間疎通まで確認できる形にします。
+今回は local compute の Cisco ルータを使って OSPF の DR / BDR / ABR を一度に確認できる構成を自動生成します。クライアントは remote compute の Ubuntu Cloud Guest を使い、DHCP でアドレスを払い出してエリア間疎通まで確認できる形にします。
 
 <!-- 画像候補: 検証トポロジ全体図 -->
-<!-- ![](/images/gns3-c3745-ospf-inter-area-mixed-compute/topology-overview.png) -->
+<!-- ![](/images/gns3-ospf-inter-area/topology-overview.png) -->
 
 ## 2. 検証シナリオ
 
-local compute の c3745 4台で OSPF の DR / BDR / ABR を確認し、remote compute の Ubuntu クライアント同士でエリア跨ぎの疎通を確認するシナリオです。
+local compute の Cisco ルータ 4台で OSPF の DR / BDR / ABR を確認し、remote compute の Ubuntu クライアント同士でエリア跨ぎの疎通を確認するシナリオです。
 
 - R1 / R2 / R3 を Area 0 の共有 Ethernet セグメントに収容し、OSPF priority で DR と BDR を固定します。
 - R3 を ABR として Area 0 と Area 10 を中継し、R4 配下の Area 10 クライアントネットワークを広告します。
@@ -26,10 +26,10 @@ local compute の c3745 4台で OSPF の DR / BDR / ABR を確認し、remote co
 | ノード | テンプレート | メモ |
 | ---- | ---- | ---- |
 | SW-A0 | ethernet_switch | Area 0 の共有セグメント。R1 / R2 / R3 の DR 選出に使う。 |
-| R1 | c3745 | Area 0 側の DR。Ubuntu-A のデフォルトゲートウェイも兼ねる。 |
-| R2 | c3745 | Area 0 側の BDR。共有セグメント上の選出結果確認用。 |
-| R3 | c3745 | Area 0 と Area 10 をつなぐ ABR。DR 選出では DROTHER に固定。 |
-| R4 | c3745 | Area 10 側の内部ルータ。Ubuntu-B のデフォルトゲートウェイを配布する。 |
+| R1 | Cisco ルータ | Area 0 側の DR。Ubuntu-A のデフォルトゲートウェイも兼ねる。 |
+| R2 | Cisco ルータ | Area 0 側の BDR。共有セグメント上の選出結果確認用。 |
+| R3 | Cisco ルータ | Area 0 と Area 10 をつなぐ ABR。DR 選出では DROTHER に固定。 |
+| R4 | Cisco ルータ | Area 10 側の内部ルータ。Ubuntu-B のデフォルトゲートウェイを配布する。 |
 | Ubuntu-A | Ubuntu Cloud Guest Ubuntu 20.04 LTS (Focal Fossa) | remote compute 上のクライアント。DHCP で Area 0 側アドレスを取得させる。 |
 | Ubuntu-B | Ubuntu Cloud Guest Ubuntu 20.04 LTS (Focal Fossa) | remote compute 上のクライアント。DHCP で Area 10 側アドレスを取得させる。 |
 
@@ -45,7 +45,7 @@ local compute の c3745 4台で OSPF の DR / BDR / ABR を確認し、remote co
 | R4 (Fa0/1) | Ubuntu-B (eth0) | 172.16.10.0/24 (Area 10 client LAN) |
 
 <!-- 画像候補: GNS3 ワークスペースのスクリーンショット -->
-<!-- ![](/images/gns3-c3745-ospf-inter-area-mixed-compute/gns3-workspace.png) -->
+<!-- ![](/images/gns3-ospf-inter-area/gns3-workspace.png) -->
 
 ## 5. 初期設定コマンド例
 
@@ -219,10 +219,10 @@ end
 - Ubuntu-A と Ubuntu-B で `ip -br address` を確認し、最後に相互に `ping` を実行してエリア間通信を確認します。
 
 <!-- 画像候補: DR / BDR / ABR の確認出力 -->
-<!-- ![](/images/gns3-c3745-ospf-inter-area-mixed-compute/show-ip-ospf-neighbor.png) -->
+<!-- ![](/images/gns3-ospf-inter-area/show-ip-ospf-neighbor.png) -->
 
 <!-- 画像候補: エリア間 ping の確認出力 -->
-<!-- ![](/images/gns3-c3745-ospf-inter-area-mixed-compute/inter-area-ping.png) -->
+<!-- ![](/images/gns3-ospf-inter-area/inter-area-ping.png) -->
 
 ## 7. 期待する結果
 
@@ -232,4 +232,4 @@ end
 
 ## 8. まとめ
 
-c3745 を使った OSPF エリア間通信のラボを自動生成し、DR / BDR / ABR の役割とクライアント疎通をまとめて確認できる構成にしました。あとは実際のキャプチャやコマンド出力を差し込むと、検証記事として完成させやすいです。
+Cisco ルータを使った OSPF エリア間通信のラボを自動生成し、DR / BDR / ABR の役割とクライアント疎通をまとめて確認できる構成にしました。あとは実際のキャプチャやコマンド出力を差し込むと、検証記事として完成させやすいです。
