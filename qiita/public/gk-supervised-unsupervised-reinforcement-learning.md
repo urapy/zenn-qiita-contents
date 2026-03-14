@@ -1,6 +1,6 @@
 ---
 title: 【G検定対策】教師あり学習・教師なし学習・強化学習をやさしく整理してみる
-private: true
+private: false
 tags:
   - G検定
   - 機械学習
