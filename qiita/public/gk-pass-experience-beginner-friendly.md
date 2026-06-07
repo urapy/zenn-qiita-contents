@@ -1,6 +1,6 @@
 ---
 title: 【合格体験記】G検定の最短ルート？用語の沼を抜けて合格した勉強法について
-private: true
+private: false
 tags:
   - G検定
   - AI
