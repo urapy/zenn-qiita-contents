@@ -1,5 +1,5 @@
 ---
-title: "スマホからCodex経由で自宅PCを操作してWebアプリを作った話"
+title: "スマホのみでWebアプリ開発。Codexで作って公開した話"
 emoji: "📱"
 type: "tech"
 topics: ["ai", "g検定", "codex", "firebase", "javascript"]
