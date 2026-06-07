@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">スマホからCodex経由で自宅開発PCを操作する流れ</title>
+  <desc id="desc">スマホ、ChatGPTアプリ、Codex、自宅開発PC、Firebase Hosting、公開アプリへつながる開発フロー図。</desc>
+  <defs>
+    <style>
+      .bg{fill:#f7fbff}
+      .card{fill:#fff;stroke:#d9e6f2;stroke-width:3}
+      .soft{fill:#eef8ff}
+      .teal{fill:#19b9a4}
+      .blue{fill:#2f80ed}
+      .purple{fill:#7457d9}
+      .dark{fill:#172033}
+      .muted{fill:#5d6b7c}
+      .line{stroke:#24a89b;stroke-width:8;stroke-linecap:round;stroke-linejoin:round;fill:none}
+      .line2{stroke:#2f80ed;stroke-width:8;stroke-linecap:round;stroke-linejoin:round;fill:none}
+      .label{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",Meiryo,sans-serif;font-weight:800;font-size:34px;fill:#172033}
+      .small{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",Meiryo,sans-serif;font-weight:600;font-size:24px;fill:#5d6b7c}
+      .tiny{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",Meiryo,sans-serif;font-weight:600;font-size:18px;fill:#5d6b7c}
+      .screen{fill:#111827}
+      .code1{stroke:#58d68d;stroke-width:4;stroke-linecap:round}
+      .code2{stroke:#60a5fa;stroke-width:4;stroke-linecap:round}
+      .code3{stroke:#f4b860;stroke-width:4;stroke-linecap:round}
+    </style>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 z" fill="#24a89b"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="14" markerHeight="14" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2f80ed"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1600" height="900"/>
+  <text x="800" y="72" text-anchor="middle" class="label" font-size="44">スマホだけを入口に、自宅PCで開発する</text>
+  <text x="800" y="114" text-anchor="middle" class="small">スマホで細かいコードを書くのではなく、Codexに意図を渡してローカル環境を動かす</text>
+
+  <!-- Smartphone -->
+  <rect x="58" y="210" width="190" height="360" rx="36" fill="#101827"/>
+  <rect x="75" y="238" width="156" height="298" rx="22" fill="#fff"/>
+  <circle cx="153" cy="552" r="8" fill="#5d6b7c"/>
+  <rect x="102" y="280" width="94" height="34" rx="17" class="soft"/>
+  <rect x="96" y="340" width="112" height="52" rx="16" fill="#d9f6ef"/>
+  <rect x="96" y="420" width="112" height="52" rx="16" fill="#eef3f8"/>
+  <text x="153" y="628" text-anchor="middle" class="label">スマホ</text>
+  <text x="153" y="666" text-anchor="middle" class="small">指示を出す</text>
+
+  <!-- ChatGPT app -->
+  <rect x="335" y="285" width="160" height="160" rx="38" fill="#22c5a5"/>
+  <circle cx="415" cy="365" r="48" fill="none" stroke="#fff" stroke-width="14"/>
+  <path d="M415 318 C458 344 458 386 415 412 C372 386 372 344 415 318Z" fill="none" stroke="#fff" stroke-width="12"/>
+  <text x="415" y="628" text-anchor="middle" class="label">ChatGPTアプリ</text>
+  <text x="415" y="666" text-anchor="middle" class="small">Codexへ依頼</text>
+
+  <!-- Codex cloud -->
+  <path d="M680 315 C694 260 765 248 797 293 C835 285 872 313 876 353 C919 361 944 392 944 431 C944 480 903 510 850 510 H658 C606 510 566 479 566 433 C566 390 596 359 637 354 C645 336 660 323 680 315Z" fill="#f0edff" stroke="#b8acf4" stroke-width="5"/>
+  <rect x="710" y="326" width="112" height="112" rx="28" class="purple"/>
+  <circle cx="746" cy="376" r="12" fill="#91fff1"/>
+  <circle cx="786" cy="376" r="12" fill="#91fff1"/>
+  <path d="M730 410 C754 428 782 428 806 410" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+  <text x="755" y="628" text-anchor="middle" class="label">Codex</text>
+  <text x="755" y="666" text-anchor="middle" class="small">作業を理解して実行</text>
+
+  <!-- Home PC -->
+  <rect x="1040" y="250" width="275" height="180" rx="12" class="screen"/>
+  <rect x="1066" y="274" width="74" height="132" rx="4" fill="#1f2937"/>
+  <line x1="1084" y1="298" x2="1122" y2="298" class="code2"/>
+  <line x1="1084" y1="326" x2="1114" y2="326" class="code1"/>
+  <line x1="1084" y1="354" x2="1126" y2="354" class="code3"/>
+  <line x1="1164" y1="292" x2="1278" y2="292" class="code2"/>
+  <line x1="1164" y1="323" x2="1246" y2="323" class="code1"/>
+  <line x1="1164" y1="354" x2="1292" y2="354" class="code3"/>
+  <line x1="1164" y1="385" x2="1228" y2="385" class="code2"/>
+  <rect x="1138" y="430" width="80" height="58" rx="4" fill="#596273"/>
+  <rect x="1002" y="488" width="350" height="28" rx="14" fill="#cfd8e3"/>
+  <text x="1176" y="628" text-anchor="middle" class="label">自宅開発PC</text>
+  <text x="1176" y="666" text-anchor="middle" class="small">ファイル編集・コマンド実行</text>
+
+  <!-- Firebase -->
+  <path d="M1368 342 C1378 304 1423 296 1448 326 C1477 322 1502 343 1504 374 C1532 379 1550 402 1550 430 C1550 466 1520 488 1482 488 H1370 C1331 488 1304 465 1304 432 C1304 401 1326 379 1355 376 C1358 362 1363 351 1368 342Z" fill="#eaf3ff" stroke="#7fb3ff" stroke-width="5"/>
+  <circle cx="1488" cy="486" r="42" class="blue"/>
+  <path d="M1488 512 V458 M1468 478 L1488 458 L1508 478" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <text x="1428" y="628" text-anchor="middle" class="label">Firebase Hosting</text>
+  <text x="1428" y="666" text-anchor="middle" class="small">公開環境へデプロイ</text>
+
+  <path d="M260 365 H318" class="line" marker-end="url(#arrow)"/>
+  <path d="M505 365 H555" class="line" marker-end="url(#arrow)"/>
+  <path d="M950 365 H1025" class="line2" marker-end="url(#arrowBlue)"/>
+  <path d="M1328 365 H1388" class="line2" marker-end="url(#arrowBlue)"/>
+
+  <rect x="230" y="760" width="1140" height="72" rx="24" fill="#e9fbf7" stroke="#b8eee3" stroke-width="3"/>
+  <text x="800" y="806" text-anchor="middle" class="small" font-size="30">人間は「何を作りたいか」をスマホで伝え、Codexが自宅PC上で細かい作業を進める</text>
+</svg>

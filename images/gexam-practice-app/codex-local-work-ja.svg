@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Codexが自宅PC上のプロジェクトで行う作業</title>
+  <desc id="desc">Codexがファイル確認、記事編集、画像配置、チェックを自宅PC上で行うイメージ図。</desc>
+  <defs>
+    <style>
+      .bg{fill:#fbfdff}
+      .panel{fill:#fff;stroke:#dce8f4;stroke-width:3}
+      .dark{fill:#111827}
+      .sidebar{fill:#1f2937}
+      .muted{fill:#637083}
+      .label{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",Meiryo,sans-serif;font-weight:800;font-size:34px;fill:#172033}
+      .small{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",Meiryo,sans-serif;font-weight:650;font-size:24px;fill:#5d6b7c}
+      .tiny{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",Meiryo,sans-serif;font-weight:650;font-size:18px;fill:#b7c5d9}
+      .step{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",Meiryo,sans-serif;font-weight:800;font-size:28px;fill:#172033}
+      .line{stroke:#20b6a4;stroke-width:7;stroke-linecap:round;stroke-linejoin:round;fill:none}
+      .code1{stroke:#60a5fa;stroke-width:4;stroke-linecap:round}
+      .code2{stroke:#58d68d;stroke-width:4;stroke-linecap:round}
+      .code3{stroke:#f4b860;stroke-width:4;stroke-linecap:round}
+    </style>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 z" fill="#20b6a4"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1600" height="900"/>
+  <text x="800" y="70" text-anchor="middle" class="label" font-size="44">Codexは自宅PC上のプロジェクトを直接扱える</text>
+  <text x="800" y="112" text-anchor="middle" class="small">スマホからの一言を、ファイル確認・編集・画像配置・チェックの作業へ分解する</text>
+
+  <rect x="80" y="180" width="360" height="560" rx="28" class="panel"/>
+  <text x="260" y="236" text-anchor="middle" class="label">スマホからの依頼</text>
+  <rect x="128" y="286" width="264" height="78" rx="20" fill="#e7fbf6"/>
+  <text x="260" y="319" text-anchor="middle" class="small">記事の主役を</text>
+  <text x="260" y="350" text-anchor="middle" class="small">スマホ開発体験にして</text>
+  <rect x="128" y="392" width="264" height="78" rx="20" fill="#eef3f8"/>
+  <text x="260" y="425" text-anchor="middle" class="small">説明図も</text>
+  <text x="260" y="456" text-anchor="middle" class="small">日本語で入れて</text>
+  <rect x="128" y="520" width="264" height="98" rx="24" fill="#172033"/>
+  <text x="260" y="560" text-anchor="middle" fill="#fff" class="small">やることを伝えるだけ</text>
+  <text x="260" y="594" text-anchor="middle" fill="#b8fff2" class="small">細かい編集は任せる</text>
+
+  <path d="M456 456 C530 456 548 456 612 456" class="line" marker-end="url(#arrow)"/>
+
+  <circle cx="705" cy="456" r="92" fill="#eef0ff" stroke="#b8acf4" stroke-width="5"/>
+  <rect x="653" y="404" width="104" height="104" rx="28" fill="#7057d9"/>
+  <circle cx="686" cy="450" r="11" fill="#84fff0"/>
+  <circle cx="724" cy="450" r="11" fill="#84fff0"/>
+  <path d="M673 481 C693 496 718 496 739 481" stroke="#fff" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <text x="705" y="600" text-anchor="middle" class="label">Codex</text>
+  <text x="705" y="638" text-anchor="middle" class="small">意図を作業に変換</text>
+
+  <path d="M800 456 C858 456 888 456 928 456" class="line" marker-end="url(#arrow)"/>
+
+  <rect x="960" y="182" width="520" height="420" rx="20" fill="#0f172a"/>
+  <rect x="980" y="210" width="138" height="360" rx="10" class="sidebar"/>
+  <text x="999" y="245" class="tiny">PROJECT</text>
+  <text x="1000" y="286" class="tiny">▾ public</text>
+  <text x="1018" y="316" class="tiny">index.html</text>
+  <text x="1018" y="346" class="tiny">styles.css</text>
+  <text x="1018" y="376" class="tiny">app.js</text>
+  <text x="1000" y="421" class="tiny">▾ articles</text>
+  <text x="1018" y="451" class="tiny">qiita</text>
+  <text x="1018" y="481" class="tiny">zenn</text>
+  <text x="1018" y="511" class="tiny">assets</text>
+  <rect x="1142" y="210" width="318" height="360" rx="10" fill="#111827"/>
+  <line x1="1170" y1="260" x2="1340" y2="260" class="code1"/>
+  <line x1="1170" y1="300" x2="1418" y2="300" class="code2"/>
+  <line x1="1170" y1="340" x2="1364" y2="340" class="code3"/>
+  <line x1="1170" y1="380" x2="1430" y2="380" class="code1"/>
+  <line x1="1170" y1="420" x2="1315" y2="420" class="code2"/>
+  <line x1="1170" y1="500" x2="1390" y2="500" stroke="#22c55e" stroke-width="4" stroke-linecap="round"/>
+  <text x="1220" y="640" text-anchor="middle" class="label">自宅開発PC</text>
+  <text x="1220" y="678" text-anchor="middle" class="small">いつもの開発環境で実行</text>
+
+  <g transform="translate(260 782)">
+    <rect x="-180" y="-48" width="360" height="96" rx="22" fill="#eef8ff" stroke="#cde6fb" stroke-width="3"/>
+    <text x="0" y="-8" text-anchor="middle" class="step">1. ファイル確認</text>
+    <text x="0" y="28" text-anchor="middle" class="small">既存ドラフトを読む</text>
+  </g>
+  <g transform="translate(616 782)">
+    <rect x="-180" y="-48" width="360" height="96" rx="22" fill="#eefbf7" stroke="#c6eee4" stroke-width="3"/>
+    <text x="0" y="-8" text-anchor="middle" class="step">2. 記事編集</text>
+    <text x="0" y="28" text-anchor="middle" class="small">主題を差し替える</text>
+  </g>
+  <g transform="translate(972 782)">
+    <rect x="-180" y="-48" width="360" height="96" rx="22" fill="#fff7e8" stroke="#f7dca5" stroke-width="3"/>
+    <text x="0" y="-8" text-anchor="middle" class="step">3. 画像配置</text>
+    <text x="0" y="28" text-anchor="middle" class="small">assets に保存する</text>
+  </g>
+  <g transform="translate(1328 782)">
+    <rect x="-180" y="-48" width="360" height="96" rx="22" fill="#f0fff4" stroke="#bdeec8" stroke-width="3"/>
+    <text x="0" y="-8" text-anchor="middle" class="step">4. チェック</text>
+    <text x="0" y="28" text-anchor="middle" class="small">パスと構成を確認</text>
+  </g>
+</svg>

@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">スマホ直接開発とスマホ指示開発の比較</title>
+  <desc id="desc">スマホで直接コードを書く場合と、スマホを指示端末としてCodexに作業させる場合の比較図。</desc>
+  <defs>
+    <style>
+      .bg{fill:#fbfdff}
+      .leftHead{fill:#182132}
+      .rightHead{fill:#0aa58f}
+      .panel{fill:#fff;stroke:#dce8f4;stroke-width:3}
+      .warn{fill:#fff0f0;stroke:#ffb4b4;stroke-width:3}
+      .ok{fill:#ecfbf6;stroke:#b7efe2;stroke-width:3}
+      .label{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",Meiryo,sans-serif;font-weight:850;font-size:34px;fill:#172033}
+      .head{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",Meiryo,sans-serif;font-weight:900;font-size:38px;fill:#fff}
+      .small{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",Meiryo,sans-serif;font-weight:650;font-size:24px;fill:#5d6b7c}
+      .item{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",Meiryo,sans-serif;font-weight:800;font-size:25px;fill:#172033}
+      .line{stroke:#16a394;stroke-width:8;stroke-linecap:round;stroke-linejoin:round;fill:none}
+      .code{stroke:#60a5fa;stroke-width:4;stroke-linecap:round}
+    </style>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 z" fill="#16a394"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="1600" height="900"/>
+  <rect x="64" y="52" width="580" height="72" rx="18" class="leftHead"/>
+  <text x="354" y="101" text-anchor="middle" class="head">スマホで直接コーディング</text>
+  <text x="354" y="160" text-anchor="middle" class="label" fill="#6b7280">つらい・遅い・迷いやすい</text>
+
+  <rect x="956" y="52" width="580" height="72" rx="18" class="rightHead"/>
+  <text x="1246" y="101" text-anchor="middle" class="head">スマホを指示センターにする</text>
+  <text x="1246" y="160" text-anchor="middle" class="label" fill="#0aa58f">目的に集中できる</text>
+
+  <line x1="800" y1="36" x2="800" y2="828" stroke="#d5dde8" stroke-width="4" stroke-dasharray="14 18"/>
+  <circle cx="800" cy="438" r="48" fill="#657386"/>
+  <text x="800" y="452" text-anchor="middle" class="head" font-size="34">VS</text>
+
+  <!-- Left phone -->
+  <rect x="290" y="212" width="230" height="470" rx="42" fill="#101827"/>
+  <rect x="310" y="248" width="190" height="390" rx="24" fill="#fff"/>
+  <rect x="310" y="248" width="190" height="185" rx="24" fill="#111827"/>
+  <line x1="338" y1="290" x2="446" y2="290" class="code"/>
+  <line x1="338" y1="328" x2="420" y2="328" stroke="#58d68d" stroke-width="4" stroke-linecap="round"/>
+  <line x1="338" y1="366" x2="468" y2="366" stroke="#f4b860" stroke-width="4" stroke-linecap="round"/>
+  <rect x="330" y="464" width="150" height="132" rx="10" fill="#eef3f8"/>
+  <text x="405" y="523" text-anchor="middle" class="small">小さい画面</text>
+  <text x="405" y="557" text-anchor="middle" class="small">小さいキーボード</text>
+
+  <g transform="translate(76 248)">
+    <rect x="0" y="0" width="188" height="72" rx="16" class="warn"/>
+    <text x="94" y="30" text-anchor="middle" class="item">読みにくい</text>
+    <text x="94" y="58" text-anchor="middle" class="small" font-size="20">コード確認が重い</text>
+  </g>
+  <g transform="translate(76 348)">
+    <rect x="0" y="0" width="188" height="72" rx="16" class="warn"/>
+    <text x="94" y="30" text-anchor="middle" class="item">打ちにくい</text>
+    <text x="94" y="58" text-anchor="middle" class="small" font-size="20">長い指示が面倒</text>
+  </g>
+  <g transform="translate(76 448)">
+    <rect x="0" y="0" width="188" height="72" rx="16" class="warn"/>
+    <text x="94" y="30" text-anchor="middle" class="item">迷いやすい</text>
+    <text x="94" y="58" text-anchor="middle" class="small" font-size="20">ファイル移動が大変</text>
+  </g>
+  <g transform="translate(76 548)">
+    <rect x="0" y="0" width="188" height="72" rx="16" class="warn"/>
+    <text x="94" y="30" text-anchor="middle" class="item">実行しにくい</text>
+    <text x="94" y="58" text-anchor="middle" class="small" font-size="20">コマンド操作が重い</text>
+  </g>
+  <rect x="116" y="732" width="440" height="82" rx="22" fill="#fff4f4" stroke="#ffcccc" stroke-width="3"/>
+  <text x="336" y="783" text-anchor="middle" class="label" fill="#d93a3a">細かい操作に消耗する</text>
+
+  <!-- Right flow -->
+  <rect x="900" y="245" width="150" height="300" rx="34" fill="#101827"/>
+  <rect x="916" y="274" width="118" height="238" rx="22" fill="#fff"/>
+  <rect x="934" y="320" width="82" height="52" rx="14" fill="#d9f6ef"/>
+  <text x="975" y="351" text-anchor="middle" class="small" font-size="18">目的を伝える</text>
+  <rect x="934" y="402" width="82" height="52" rx="14" fill="#eef3f8"/>
+  <text x="975" y="433" text-anchor="middle" class="small" font-size="18">結果を見る</text>
+  <text x="975" y="604" text-anchor="middle" class="item">1. 指示</text>
+
+  <path d="M1068 394 H1132" class="line" marker-end="url(#arrow)"/>
+  <circle cx="1206" cy="394" r="68" fill="#eef0ff" stroke="#b8acf4" stroke-width="5"/>
+  <rect x="1169" y="357" width="74" height="74" rx="20" fill="#7057d9"/>
+  <circle cx="1192" cy="389" r="8" fill="#84fff0"/>
+  <circle cx="1219" cy="389" r="8" fill="#84fff0"/>
+  <text x="1206" y="604" text-anchor="middle" class="item">2. Codexが計画</text>
+
+  <path d="M1280 394 H1344" class="line" marker-end="url(#arrow)"/>
+  <rect x="1378" y="300" width="170" height="118" rx="12" fill="#111827"/>
+  <line x1="1402" y1="334" x2="1500" y2="334" class="code"/>
+  <line x1="1402" y1="364" x2="1478" y2="364" stroke="#58d68d" stroke-width="4" stroke-linecap="round"/>
+  <line x1="1402" y1="394" x2="1522" y2="394" stroke="#f4b860" stroke-width="4" stroke-linecap="round"/>
+  <rect x="1426" y="418" width="74" height="36" rx="6" fill="#64748b"/>
+  <text x="1463" y="604" text-anchor="middle" class="item">3. PCが実作業</text>
+
+  <rect x="930" y="680" width="540" height="86" rx="22" class="ok"/>
+  <text x="1200" y="716" text-anchor="middle" class="label" fill="#0f766e">人間は目的に集中</text>
+  <text x="1200" y="750" text-anchor="middle" class="small">ファイル編集・コマンド実行・確認はCodexに任せる</text>
+</svg>
