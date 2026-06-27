@@ -27,5 +27,5 @@ jobs:
       - uses: ./.github/actions/qiita-publish
         with:
           qiita-token: ${{ secrets.QIITA_TOKEN }}
-          github-token: ${{ secrets.GH_TOKEN }}
+          github-token: ${{ github.token }}
           rootdir: ./qiita
