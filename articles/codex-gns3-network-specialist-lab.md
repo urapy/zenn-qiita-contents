@@ -3,7 +3,7 @@ title: '【これはすごい】Codexに構成図を渡したらGNS3検証環境
 emoji: '🧪'
 type: 'tech'
 topics: ['gns3', 'codex', 'network', '生成ai', 'ネスペ']
-published: false
+published: true
 ---
 
 ## １．はじめに
@@ -48,6 +48,10 @@ published: false
 
 Codexが画像から、機器名、接続関係、VLAN、OSPFの範囲などを読み取り、GNS3のトポロジへ変換しました。
 
+![Codexへ渡したネスペ問題集のネットワーク構成図](/images/codex-gns3-network-specialist-lab/01-network-specialist-book.jpg)
+
+_Codexへ渡したネスペ問題集のネットワーク構成図_
+
 最初の依頼は、とてもシンプルです。
 
 ```text
@@ -78,6 +82,10 @@ GNS3 VMは第4オクテット102しか使いません。
 
 この使い方が非常に便利でした。
 
+![Codexへ構成図を渡してGNS3プロジェクトの作成を依頼した画面](/images/codex-gns3-network-specialist-lab/02-codex-request.png)
+
+_画像を渡してGNS3プロジェクトの作成を依頼_
+
 ## ３．作成されたGNS3ラボ
 
 最終的に、次の規模のラボになりました。
@@ -91,6 +99,10 @@ GNS3 VMは第4オクテット102しか使いません。
 | 合計               |   26 |
 
 リンク数は27本です。
+
+![Codexが構成図から作成したGNS3トポロジ全体](/images/codex-gns3-network-specialist-lab/03-gns3-topology-overview.png)
+
+_Codexが構成図から作成したGNS3トポロジ_
 
 再現した主な機能はこちらです。
 
@@ -142,6 +154,10 @@ GNS3 VMは第4オクテット102しか使いません。
 | SaaS eBGP      | `172.30.0.0/24`   | PE `.1`、R30 `.30`、R31 `.31`              |
 | SaaSサービス   | `10.100.0.0/24`   | PE `.1`、APP `.100`                        |
 
+![ネットワークアドレスと端末IPを直接表示したGNS3トポロジ](/images/codex-gns3-network-specialist-lab/04-gns3-address-labels.png)
+
+_ネットワークアドレスと端末IPをトポロジ上へ直接表示_
+
 トポロジ上にはネットワークアドレスを直接記載し、各端末の下には`.101`のように第4オクテットだけを表示しました。
 
 全てをフルアドレスで書くと、せっかくの構成図が文字だらけになります。
@@ -175,6 +191,10 @@ R21、R31は、DMVPNのTunnelインタフェースを通してハブルータと
 
 R30とC-SAAS-PE、R31とC-SAAS-PEのeBGPピアが確立し、SaaS側ネットワークの経路を学習できました。
 
+![OSPFの隣接関係とeBGPピアの確立を確認したコンソール](/images/codex-gns3-network-specialist-lab/05-routing-neighbors.png)
+
+_OSPFの隣接関係とeBGPピアの確立を確認_
+
 ### 東京LANのVRRP
 
 東京LANのデフォルトゲートウェイは、R20とR21で構成したVRRPの仮想IPです。
@@ -187,6 +207,10 @@ R21：10.20.20.21
 
 端末は、R20とR21のどちらがMasterになっているかを意識せず、`10.20.20.1`をデフォルトゲートウェイとして利用できます。
 
+![東京LANのVRRP状態と仮想IPを確認した画面](/images/codex-gns3-network-specialist-lab/06-vrrp-status.png)
+
+_東京LANのデフォルトゲートウェイをVRRPで冗長化_
+
 ### 端末間のping
 
 実際に次の疎通を確認しました。
@@ -198,6 +222,10 @@ R21：10.20.20.21
 | 東京PC `10.20.20.100` | VRRP仮想IP `10.20.20.1`             | 成功 |
 | 東京PC `10.20.20.100` | SaaS `10.100.0.100`                 | 成功 |
 | SaaS `10.100.0.100`   | 大阪PC `10.10.40.101`               | 成功 |
+
+![大阪・東京・SaaS間のエンドツーエンドping結果](/images/codex-gns3-network-specialist-lab/07-end-to-end-ping.png)
+
+_拠点をまたいだ端末間通信に成功_
 
 最初の1パケットだけARP解決などでタイムアウトする場合がありますが、その後は正常に応答しました。
 
@@ -218,14 +246,6 @@ R21：10.20.20.21
 - NHRP認証文字列を8文字以内へ変更
 - ISAKMPのDH groupを対応している値へ変更
 - IPsec profileを定義してからTunnelへ適用
-
-### GNS3の文字注釈
-
-IPアドレスをトポロジへ追加したものの、最初は画面に表示されませんでした。
-
-原因は、GNS3 2.2.49がSVGの先頭要素を見て、図形かテキスト注釈かを判定していたためです。
-
-背景付きの四角形を先に書くと文字が注釈として読み込まれなかったため、GNS3純正のテキスト形式へ変更しました。
 
 ### 作って終わりではなく、動作を見ながら直す！！！
 
