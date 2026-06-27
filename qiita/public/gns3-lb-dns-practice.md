@@ -1,13 +1,13 @@
 ---
 title: 【ネスペ対策】GNS3でロードバランサとDNSの検証環境を作った話
-private: false
 tags:
-  - zenn
-  - qiita
+  - Qiita
   - idea
+  - GNS3
   - ネスペ
-  - gns3
-updated_at: '2026-03-17T21:26:50+09:00'
+  - Zenn
+private: false
+updated_at: '2026-06-28T01:25:56+09:00'
 id: 829ff2fecb049fecd713
 organization_url_name: null
 ---

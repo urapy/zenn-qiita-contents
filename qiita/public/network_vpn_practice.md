@@ -1,13 +1,13 @@
 ---
 title: 【GNS3】CiscoとJniperを使ったVPN環境
-private: false
 tags:
-  - network
-  - gns3
-  - cisco
+  - Network
+  - Cisco
   - juniper
-  - chatgpt
-updated_at: '2026-03-17T21:26:50+09:00'
+  - GNS3
+  - ChatGPT
+private: false
+updated_at: '2026-06-28T01:25:56+09:00'
 id: 7a66863ab2fa4f67b85c
 organization_url_name: null
 ---

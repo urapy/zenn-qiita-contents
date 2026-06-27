@@ -1,13 +1,13 @@
 ---
 title: 【合格体験記】G検定の最短ルート？用語の沼を抜けて合格した勉強法について
-private: false
 tags:
-  - G検定
-  - AI
-  - 機械学習
-  - ディープラーニング
   - 初心者
-updated_at: '2026-06-07T14:14:16+09:00'
+  - 機械学習
+  - DeepLearning
+  - AI
+  - G検定
+private: false
+updated_at: '2026-06-28T01:25:56+09:00'
 id: a71ebc53c90a25727bbd
 organization_url_name: null
 ---

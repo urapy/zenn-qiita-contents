@@ -1,12 +1,12 @@
 ---
 title: 【G検定対策】ディープラーニングの基本用語をやさしく整理してみる
-private: false
 tags:
-  - G検定
-  - ディープラーニング
-  - AI
   - 初心者
-updated_at: '2026-03-17T21:26:50+09:00'
+  - DeepLearning
+  - AI
+  - G検定
+private: false
+updated_at: '2026-06-28T01:25:56+09:00'
 id: bb8e8e54d2ecd997e813
 organization_url_name: null
 ---

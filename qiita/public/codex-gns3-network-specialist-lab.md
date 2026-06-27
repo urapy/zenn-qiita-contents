@@ -1,17 +1,15 @@
 ---
 title: 【これはすごい】Codexに構成図を渡したらGNS3検証環境を自動作成できた！
-private: false
 tags:
-  - gns3
+  - Network
+  - GNS3
   - codex
-  - network
-  - 生成ai
   - ネスペ
-updated_at: '2026-06-28T01:22:52+09:00'
+  - 生成AI
+private: false
+updated_at: '2026-06-28T01:25:56+09:00'
 id: 0dba517eb1eab74776b8
 organization_url_name: null
-slide: false
-ignorePublish: false
 ---
 
 ## １．はじめに

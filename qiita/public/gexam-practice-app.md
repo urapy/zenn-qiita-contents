@@ -1,16 +1,15 @@
 ---
-title: "スマホのみでWebアプリ開発: CodexでG検定模擬試験アプリを公開した"
+title: 'スマホのみでWebアプリ開発: CodexでG検定模擬試験アプリを公開した'
 tags:
-  - AI
-  - G検定
-  - Codex
-  - Firebase
   - JavaScript
+  - AI
+  - Firebase
+  - G検定
+  - codex
 private: false
-updated_at: ""
-id: "40e7b0b95153a4e250d4"
+updated_at: '2026-06-28T01:25:56+09:00'
+id: 40e7b0b95153a4e250d4
 organization_url_name: null
-slide: false
 ---
 
 ## 作ったもの
