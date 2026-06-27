@@ -26,10 +26,14 @@ export function convertFrontmatter(outputPath?: string) {
       dataCloned.id = existingData.id || null
       dataCloned.organization_url_name =
         existingData.organization_url_name || null
+      dataCloned.slide = existingData.slide ?? false
+      dataCloned.ignorePublish = existingData.ignorePublish ?? false
     } else {
       dataCloned.updated_at = null
       dataCloned.id = null
       dataCloned.organization_url_name = null
+      dataCloned.slide = false
+      dataCloned.ignorePublish = false
     }
 
     const frontmatter = yaml.dump(dataCloned)
